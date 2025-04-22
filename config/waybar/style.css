@@ -1,0 +1,96 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack Nerd Font", "Font Awesome 6", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #24273a;
+    color: #cad3f5;
+    border-radius: 0px;
+    padding: 4px 10px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+#window {
+    margin-left: 10px;
+    color: #eba0ac;
+}
+/* Modulos generales */
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: #aaaaaa;
+    border-radius: 4px;
+}
+
+#workspaces button.active {
+    color: #cad3f5;
+    background: #ee99a0;
+}
+
+#workspaces button.urgent {
+    background-color: #bf616a;
+    color: #cad3f5;
+}
+
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#temperature,
+#backlight,
+#tray,
+#idle_inhibitor,
+#custom-power,
+#custom-media,
+#power-profiles-daemon {
+    padding: 0 10px;
+    margin: 0 2px;
+    background-color: #494d64;
+    border-radius: 6px;
+}
+
+#clock {
+    background-color: #363a4f;
+    padding: 0 10px;
+    margin: 0 2px;
+    border-radius: 6px;
+}
+
+/* Especial para batería */
+#battery.warning {
+    background-color: #ebcb8b;
+    color: #2e3440;
+}
+#battery.critical {
+    background-color: #bf616a;
+    color: #cad3f5;
+}
+
+/* Tooltip */
+tooltip {
+    background: #2e3440;
+    border: 1px solid #4c566a;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+tooltip label {
+    color: #eceff4;
+}
+
+/* Power menu icon */
+#custom-power {
+    color: #d08770;
+    font-size: 14px;
+    padding-left: 12px;
+}
+
+/* Tray icons */
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
